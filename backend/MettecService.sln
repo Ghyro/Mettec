@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MettecService.API", "MettecService.API\MettecService.API.csproj", "{0DF49375-0323-46B3-837B-25ED467DA7B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MettecService.Tests", "MettecService.Tests\MettecService.Tests.csproj", "{9017C721-831A-4E04-9515-87612952212F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MettecService.Core", "MettecService.Core\MettecService.Core.csproj", "{3CB104EF-E235-4469-94B7-F0CD52E98873}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MettecService.DataAccess", "MettecService.DataAccess\MettecService.DataAccess.csproj", "{21246020-F769-4941-A164-B5BF541C1BCA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DF49375-0323-46B3-837B-25ED467DA7B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DF49375-0323-46B3-837B-25ED467DA7B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DF49375-0323-46B3-837B-25ED467DA7B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DF49375-0323-46B3-837B-25ED467DA7B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9017C721-831A-4E04-9515-87612952212F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9017C721-831A-4E04-9515-87612952212F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9017C721-831A-4E04-9515-87612952212F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9017C721-831A-4E04-9515-87612952212F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CB104EF-E235-4469-94B7-F0CD52E98873}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CB104EF-E235-4469-94B7-F0CD52E98873}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CB104EF-E235-4469-94B7-F0CD52E98873}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CB104EF-E235-4469-94B7-F0CD52E98873}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21246020-F769-4941-A164-B5BF541C1BCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21246020-F769-4941-A164-B5BF541C1BCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21246020-F769-4941-A164-B5BF541C1BCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21246020-F769-4941-A164-B5BF541C1BCA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
