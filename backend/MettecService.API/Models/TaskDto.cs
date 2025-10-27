@@ -2,8 +2,8 @@ namespace MettecService.API.Models;
 
 public class TaskDto
 {
-    public Guid Id { get; set; }
-    public string Title { get; set; }
-    public string Description { get; set; }
-    public bool IsCompleted { get; set; }
+    public required Guid Id { get; set; }
+    public required string Title { get; set; }
+    public required string Description { get; set; }
+    public required bool IsCompleted { get; set; }
 }

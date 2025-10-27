@@ -3,6 +3,7 @@ using System;
 using MettecService.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MettecService.DataAccess.Migrations
 {
     [DbContext(typeof(MettecDbContext))]
-    partial class MettecDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251027205056_UpdatedTaskItemModel_DescriptionIsRequired")]
+    partial class UpdatedTaskItemModel_DescriptionIsRequired
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

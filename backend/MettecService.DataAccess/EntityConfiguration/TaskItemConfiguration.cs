@@ -12,10 +12,11 @@ public class TaskItemConfiguration : IEntityTypeConfiguration<TaskItem>
         
         builder.Property(t => t.Title)
             .IsRequired()
-            .HasMaxLength(200);
+            .HasMaxLength(100);
 
         builder.Property(t => t.Description)
-            .HasMaxLength(2000);
+            .IsRequired()
+            .HasMaxLength(5000);
         
         builder.Property(t => t.IsCompleted)
             .HasDefaultValue(false);
