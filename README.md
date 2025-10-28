@@ -1,19 +1,5 @@
 # Mettec Backend & Frontend
 
-## Table of Contents
-
-- [Backend](#backend)
-  - [Prerequisites](#prerequisites)
-  - [Docker Setup](#building-the-docker-container-locally-optional)
-  - [Setup](#setup)
-  - [Run Unit Tests](#run-unit-tests)
-- [Frontend](#frontend)
-  - [Prerequisites](#prerequisites)
-  - [Setup](#setup)
-  - [Run Unit Tests](#run-unit-tests)
-
----
-
 ## Backend
 
 ### Prerequisites
