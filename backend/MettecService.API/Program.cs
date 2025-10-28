@@ -24,11 +24,22 @@ builder.Services.AddHealthChecks()
 builder.Services.AddScoped<ITaskService, MettecService.Core.Services.TaskService>();
 builder.Services.AddScoped<ITaskRepository, TaskRepository>();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllLocal", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    app.UseCors("AllowAllLocal");
     app.UseSwagger();
     app.UseSwaggerUI();
 }
