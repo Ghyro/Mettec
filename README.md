@@ -49,14 +49,17 @@ PGADMIN_DEFAULT_PASSWORD=admin
 
 #### 5. Migration
 
-Install dotnet-ef globally on your local machine:
+In general, migrations will be applied first time by EF Core once app starts against database.
+If you need a new migration, please follow those steps:
+
+Install dotnet-ef globally on your local machine (one time):
 
 ```
 dotnet tool install --global dotnet-ef
 ```
 
 - Go to `backend` folder in terminal.
-- Create EF migration with command:
+- Create EF migration with command (each time for a new migration):
 
 ```
 dotnet ef migrations add {MIGRATION_NAME} --project MettecService.DataAccess --startup-project MettecService.API
@@ -75,7 +78,7 @@ Service localhost URL: http://localhost:7300/swagger/index.html
 
 #### appsettings.development.json
 
-The `appsettings.development.json` file is already configured to connect to the local PostgreSQL container. If you have use another database instance, please change connection string.
+The `appsettings.development.json` file is already configured to connect to the local PostgreSQL container. **If you have use another database instance, please change connection string.**
 
 ---
 
