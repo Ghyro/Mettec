@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MettecService.DataAccess.Repositories;
 
-public class MetterRepository(MettecDbContext dbContext) : IMetterRepository
+public class TaskRepository(MettecDbContext dbContext) : ITaskRepository
 {
     public async Task<TaskItem?> GetTaskByIdAsync(Guid id, bool asTracking = false,
         CancellationToken cancellationToken = default)

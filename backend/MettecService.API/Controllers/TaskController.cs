@@ -9,7 +9,7 @@ namespace MettecService.API.Controllers;
 [Route("[controller]")]
 [ApiController]
 public class TaskController(
-    IMetterService metterService,
+    ITaskService taskService,
     IMapper mapper) : ControllerBase
 {
     [HttpGet]
@@ -17,7 +17,7 @@ public class TaskController(
     public async Task<ActionResult<IReadOnlyCollection<TaskDto>>> GetTasks(
         CancellationToken cancellationToken = default)
     {
-        var tasks = await metterService.GetTasksAsync(cancellationToken);
+        var tasks = await taskService.GetTasksAsync(cancellationToken);
         return Ok(mapper.Map<IReadOnlyCollection<TaskDto>>(tasks));
     }
     
@@ -27,10 +27,9 @@ public class TaskController(
         [FromRoute] Guid id,
         CancellationToken cancellationToken = default)
     {
-        var tasks = await metterService.GetTaskByIdAsync(id, cancellationToken);
+        var tasks = await taskService.GetTaskByIdAsync(id, cancellationToken);
         return Ok(mapper.Map<TaskDto>(tasks));
     }
-
 
     [HttpPost("create")]
     [ProducesResponseType(StatusCodes.Status200OK)]
@@ -40,7 +39,7 @@ public class TaskController(
         CancellationToken cancellationToken = default)
     {
         var task = mapper.Map<TaskItem>(request);
-        var created = await metterService.CreateTaskAsync(task, cancellationToken);
+        var created = await taskService.CreateTaskAsync(task, cancellationToken);
         return Ok(mapper.Map<TaskDto>(created));
     }
 
@@ -52,7 +51,7 @@ public class TaskController(
         [FromBody] UpdateTaskStatusRequest statusRequest,
         CancellationToken cancellationToken = default)
     {
-        var updated = await metterService.UpdateTaskStatusAsync(id, statusRequest.IsCompleted, cancellationToken);
+        var updated = await taskService.UpdateTaskStatusAsync(id, statusRequest.IsCompleted, cancellationToken);
         return Ok(updated);
     }
 }

@@ -21,8 +21,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddHealthChecks()
     .AddCheck<DatabaseHealthCheck>("Database connection");
 
-builder.Services.AddScoped<IMetterService, MettecService.Core.Services.MettecService>();
-builder.Services.AddScoped<IMetterRepository, MetterRepository>();
+builder.Services.AddScoped<ITaskService, MettecService.Core.Services.TaskService>();
+builder.Services.AddScoped<ITaskRepository, TaskRepository>();
 
 var app = builder.Build();
 

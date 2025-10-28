@@ -2,7 +2,7 @@ using MettecService.DataAccess.Entities;
 
 namespace MettecService.DataAccess.Repositories;
 
-public interface IMetterRepository
+public interface ITaskRepository
 {
     Task<TaskItem?> GetTaskByIdAsync(Guid id, bool asTracking, CancellationToken cancellationToken = default);
 
