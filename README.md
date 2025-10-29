@@ -33,6 +33,16 @@ PGADMIN_DEFAULT_EMAIL=admin@gmail.com
 PGADMIN_DEFAULT_PASSWORD=admin
 ```
 
+### 4. Run Service Locally
+
+If you run via terminal, use the following command from `backend` folder:
+
+```
+dotnet run --project ./MettecService.API/MettecService.API.csproj --launch-profile "MettecService.API.Local"
+```
+
+Service localhost URL: http://localhost:7300/swagger/index.html
+
 #### 5. Migration
 
 In general, migrations will be applied first time by EF Core once app starts against database.
@@ -51,18 +61,7 @@ dotnet tool install --global dotnet-ef
 dotnet ef migrations add {MIGRATION_NAME} --project MettecService.DataAccess --startup-project MettecService.API
 ```
 
-### Run Service Locally
-
-If you run via terminal, use the following command from `backend` folder:
-
-```
-dotnet run --project ./MettecService.API/MettecService.API.csproj --launch-profile "MettecService.API.Local"
-
-```
-
-Service localhost URL: http://localhost:7300/swagger/index.html
-
-#### appsettings.development.json
+#### 6. appsettings.development.json
 
 The `appsettings.development.json` file is already configured to connect to the local PostgreSQL container. **If you have use another database instance, please change connection string.**
 
